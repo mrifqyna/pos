@@ -5,18 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/ic_bg_regis"
+    android:background="@drawable/ic_p"
     tools:context=".Register"
     android:gravity="center"
     android:padding="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:textColor="#2978b5"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="111dp"
+        android:src="@drawable/ic_paw" />
 
     <EditText
         android:id="@+id/etUsername"
@@ -54,7 +51,7 @@
         android:background="@drawable/shapeedittext"
         android:layout_margin="10dp"
         android:padding="15dp"
-        android:drawableLeft="@drawable/ic_outline_lock_24"
+        android:drawableLeft="@drawable/ic_outline_lock_24reg"
         android:drawablePadding="10dp"
         android:hint="Password"
         android:inputType="textPassword"
@@ -68,7 +65,7 @@
         android:background="@drawable/shapeedittext"
         android:layout_margin="10dp"
         android:padding="15dp"
-        android:drawableLeft="@drawable/ic_outline_lock_24"
+        android:drawableLeft="@drawable/ic_outline_lock_24reg"
         android:drawablePadding="10dp"
         android:inputType="textPassword"
         android:hint="Ulangi Password"
@@ -80,11 +77,11 @@
         android:layout_width="142dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/shape"
         android:padding="10dp"
         android:text="Register"
         android:textColor="#FFF"
