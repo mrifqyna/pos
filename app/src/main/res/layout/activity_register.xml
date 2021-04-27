@@ -22,7 +22,7 @@
         android:background="@drawable/shapeedittext"
         android:layout_margin="10dp"
         android:padding="15dp"
-        android:drawableLeft="@drawable/ic_outline_account_circle_24"
+        android:drawableLeft="@drawable/ic_outline_person_24"
         android:drawablePadding="10dp"
         android:hint="Username"
         android:textColor="@color/colorPrimary"
@@ -30,15 +30,15 @@
         android:textColorHighlight="@color/colorPrimary"/>
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/shapeedittext"
-        android:drawableLeft="@drawable/ic_outline_email_reg"
+        android:drawableLeft="@drawable/ic_outline_account_circle_24"
         android:drawablePadding="10dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
+        android:hint="Nama"
+        android:inputType="text"
         android:padding="15dp"
         android:textColor="@color/colorPrimary"
         android:textColorHighlight="@color/colorPrimary"

@@ -20,7 +20,7 @@ class Register : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         var btnRegister = findViewById<Button>(R.id.btnRegister)
-        var etNama = findViewById<EditText>(R.id.etEmail)
+        var etNama = findViewById<EditText>(R.id.etNama)
         var etUsername = findViewById<EditText>(R.id.etUsername)
         var etPassword = findViewById<EditText>(R.id.etPass1)
         var etPassword2 = findViewById<EditText>(R.id.etPass2)
@@ -37,14 +37,14 @@ class Register : AppCompatActivity() {
         }
 
         btnRegister.setOnClickListener {
-            if (etNama.text.toString().contains("@")) {
-                Toast.makeText(this, "Email harus valid", Toast.LENGTH_SHORT).show()
-            } else if (etUsername.text.toString().isEmpty()) {
-                Toast.makeText(this, "Username harus diisi", Toast.LENGTH_SHORT).show()
-            } else if (etPassword.text.toString().isEmpty()) {
-                Toast.makeText(this, "Password harus diisi", Toast.LENGTH_SHORT).show()
-            } else if (etPassword2.text.toString().isEmpty()) {
-                Toast.makeText(this, "Passowrd tidak sama", Toast.LENGTH_SHORT).show()
+            if (etNama.text.toString().isEmpty()) {
+                Toast.makeText(this, "Nama harus diisi", Toast.LENGTH_SHORT).show()
+            } else if (etUsername.text.toString().length < 6) {
+                Toast.makeText(this, "Username minimal 6 karakter", Toast.LENGTH_SHORT).show()
+            }  else if (etPassword.text.toString().length < 8) {
+                Toast.makeText(this,"Password minimal 8 karakter",Toast.LENGTH_SHORT).show()
+            } else if (etPassword2.text.toString() != etPassword.text.toString()) {
+                Toast.makeText(this,"Password tidak sama",Toast.LENGTH_SHORT).show()
             } else {
                 //action kirim nilai yang diisikan pada kolom2 tsb ke URL file PHP via JSON menggunakan method POST
                 jsonObject.put("nama", etNama.text.toString())

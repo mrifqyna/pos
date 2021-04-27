@@ -7,23 +7,13 @@
     android:layout_height="match_parent"
     android:background="@drawable/ic_menubg"
     tools:context=".MainActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/account"
-            android:background="@drawable/round"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"/>
-    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_product"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentBottom="true"/>
 
     <include layout="@layout/bottomsheet_cart"/>
 
@@ -35,6 +25,7 @@
         app:cardBackgroundColor="@color/colorprimarydark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <LinearLayout
             android:gravity="center_vertical"

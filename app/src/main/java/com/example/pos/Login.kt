@@ -17,7 +17,7 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        var etUsername = findViewById<EditText>(R.id.etEmail)
+        var etUsername = findViewById<EditText>(R.id.etUsername)
         var etPassword = findViewById<EditText>(R.id.etPassword)
         var tvRegister = findViewById<TextView>(R.id.tvRegister)
         var btnLogin = findViewById<Button>(R.id.btnSignin)
@@ -32,8 +32,8 @@ class Login : AppCompatActivity() {
         }
 
         btnLogin.setOnClickListener {
-            if (etUsername.text.toString().isEmpty()) {
-                Toast.makeText(this, "Username harus diisi", Toast.LENGTH_SHORT).show()
+            if (etUsername.text.toString().length < 6) {
+                Toast.makeText(this, "Username minimal 6 karakter", Toast.LENGTH_SHORT).show()
             } else if (etPassword.text.toString().isEmpty()) {
                 Toast.makeText(this, "Password harus diisi", Toast.LENGTH_SHORT).show()
             } else {
@@ -44,11 +44,9 @@ class Login : AppCompatActivity() {
                     if (response.getString("status") == "berhasil") {
 
                         val stringPesan = etUsername.text.toString()
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, Dashboard::class.java)
                         intent.putExtra("Pesan", stringPesan)
                         startActivity(intent)
-
-                        Toast.makeText(this, "Selamat Anda Berhasil Login, ${response.getString("nama")}", Toast.LENGTH_SHORT).show()
                     } else if (response.getString("status") == "gagal") {
                         Toast.makeText(this, "Gagal Login", Toast.LENGTH_SHORT).show()
                     }

@@ -1,9 +1,17 @@
 package com.example.pos
 
+import android.content.DialogInterface
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
+import android.widget.Toolbar
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -17,7 +25,7 @@ import kotlinx.android.synthetic.main.bottomsheet_cart.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var productViewModel: ProductViewModel
-    private lateinit var bottomSheet : BottomSheetBehavior<*>
+    private lateinit var bottomSheet: BottomSheetBehavior<*>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,14 +33,15 @@ class MainActivity : AppCompatActivity() {
         setupUI()
     }
 
-    private fun setupUI(){
+    private fun setupUI() {
         productViewModel = ViewModelProvider(this).get(ProductViewModel::class.java)
         rv_product.apply {
-            layoutManager = if(resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT){
-                GridLayoutManager(this@MainActivity, 2)
-            }else{
-                GridLayoutManager(this@MainActivity, 4)
-            }
+            layoutManager =
+                if (resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+                    GridLayoutManager(this@MainActivity, 2)
+                } else {
+                    GridLayoutManager(this@MainActivity, 4)
+                }
             adapter = ProductAdapter(mutableListOf(), this@MainActivity, productViewModel)
         }
         rv_selected_product.apply {
@@ -42,9 +51,9 @@ class MainActivity : AppCompatActivity() {
         bottomSheet = BottomSheetBehavior.from(bottomsheet_detail_order)
         bottomSheet.state = BottomSheetBehavior.STATE_HIDDEN
         btn_detail.setOnClickListener {
-            if (bottomSheet.state == BottomSheetBehavior.STATE_COLLAPSED || bottomSheet.state == BottomSheetBehavior.STATE_HIDDEN){
+            if (bottomSheet.state == BottomSheetBehavior.STATE_COLLAPSED || bottomSheet.state == BottomSheetBehavior.STATE_HIDDEN) {
                 bottomSheet.state = BottomSheetBehavior.STATE_EXPANDED
-            }else{
+            } else {
                 bottomSheet.state = BottomSheetBehavior.STATE_HIDDEN
             }
         }
@@ -54,18 +63,20 @@ class MainActivity : AppCompatActivity() {
         productViewModel.fetchDummyProduct()
         productViewModel.listenToProducts().observe(this, Observer {
             rv_product.adapter?.let { a ->
-                if(a is ProductAdapter){
+                if (a is ProductAdapter) {
                     a.updateList(it)
                 }
             }
         })
         productViewModel.listenToSelectedProduct().observe(this, Observer {
-            rv_selected_product.adapter?.let { a->
-                if(a is SelectedProductAdapter){
+            rv_selected_product.adapter?.let { a ->
+                if (a is SelectedProductAdapter) {
                     a.updateList(it)
                 }
             }
-            val totalPrice = if(it.isEmpty()){ 0 }else{
+            val totalPrice = if (it.isEmpty()) {
+                0
+            } else {
                 it.sumBy { p ->
                     p.price!! * p.selectedQuantity!!
                 }

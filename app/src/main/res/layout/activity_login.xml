@@ -16,14 +16,14 @@
         android:src="@drawable/ic_paw" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/shapeedittext"
-        android:drawableLeft="@drawable/ic_outline_email_24"
+        android:drawableLeft="@drawable/ic_outline_person_24"
         android:drawablePadding="10dp"
-        android:hint="Email"
+        android:hint="Username"
         android:padding="15dp"
         android:textColor="#2978b5"
         android:textColorHighlight="#2978b5"
@@ -49,7 +49,7 @@
         android:layout_width="142dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="26dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/shape"
