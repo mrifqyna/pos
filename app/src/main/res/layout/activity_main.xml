@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true" />
 
     <include layout="@layout/bottomsheet_cart"/>
 
@@ -35,30 +35,33 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:orientation="vertical"
-                android:background="?attr/selectableItemBackground"
                 android:id="@+id/btn_checkout"
-                android:clickable="true"
-                android:padding="8dp"
-                android:layout_weight="1.7"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="8dp">
 
                 <TextView
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#fff"
-                    android:text="Tagih"
-                    android:maxLines="1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:maxLines="1"
+                    android:text="Tagih"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/total_price"
-                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:text="Rp.0"
                     android:textColor="#fff"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="16sp" />
 
             </LinearLayout>
 

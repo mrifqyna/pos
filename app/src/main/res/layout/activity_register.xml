@@ -11,9 +11,10 @@
     android:padding="20dp">
 
     <ImageView
-        android:layout_width="140dp"
-        android:layout_height="111dp"
-        android:src="@drawable/ic_paw" />
+        android:layout_width="161dp"
+        android:layout_height="142dp"
+        android:src="@drawable/ic_paw"
+        android:layout_marginBottom="20dp"/>
 
     <EditText
         android:id="@+id/etUsername"
@@ -27,7 +28,8 @@
         android:hint="Username"
         android:textColor="@color/colorPrimary"
         android:textColorHint="@color/colorPrimary"
-        android:textColorHighlight="@color/colorPrimary"/>
+        android:textColorHighlight="@color/colorPrimary"
+        android:fontFamily="@font/poppins"/>
 
     <EditText
         android:id="@+id/etNama"
@@ -42,7 +44,8 @@
         android:padding="15dp"
         android:textColor="@color/colorPrimary"
         android:textColorHighlight="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimary" />
+        android:textColorHint="@color/colorPrimary"
+        android:fontFamily="@font/poppins"/>
 
     <EditText
         android:id="@+id/etPass1"
@@ -71,7 +74,8 @@
         android:hint="Ulangi Password"
         android:textColor="@color/colorPrimary"
         android:textColorHint="@color/colorPrimary"
-        android:textColorHighlight="@color/colorPrimary"/>
+        android:textColorHighlight="@color/colorPrimary"
+        android:fontFamily="@font/poppins"/>
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="142dp"
@@ -85,7 +89,8 @@
         android:padding="10dp"
         android:text="Register"
         android:textColor="#FFF"
-        android:textSize="17dp"/>
+        android:textSize="17dp"
+        android:fontFamily="@font/poppins"/>
     <TextView
         android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
@@ -93,6 +98,7 @@
         android:text="Sudah memiliki akun?"
         android:textColor="#2978b5"
         android:textSize="12dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"/>
 
 </LinearLayout>

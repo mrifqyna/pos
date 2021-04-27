@@ -13,7 +13,8 @@
     <ImageView
         android:layout_width="161dp"
         android:layout_height="142dp"
-        android:src="@drawable/ic_paw" />
+        android:src="@drawable/ic_paw"
+        android:layout_marginBottom="20dp"/>
 
     <EditText
         android:id="@+id/etUsername"
@@ -21,13 +22,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/shapeedittext"
-        android:drawableLeft="@drawable/ic_outline_person_24"
+        android:drawableLeft="@drawable/ic_outline_person_24login"
         android:drawablePadding="10dp"
         android:hint="Username"
         android:padding="15dp"
         android:textColor="#2978b5"
         android:textColorHighlight="#2978b5"
-        android:textColorHint="#2978b5" />
+        android:textColorHint="#2978b5"
+        android:fontFamily="@font/poppins"/>
 
     <EditText
         android:id="@+id/etPassword"
@@ -42,7 +44,8 @@
         android:hint="Password"
         android:textColor="#2978b5"
         android:textColorHint="#2978b5"
-        android:textColorHighlight="#2978b5" />
+        android:textColorHighlight="#2978b5"
+        android:fontFamily="@font/poppins"/>
 
     <Button
         android:id="@+id/btnSignin"
@@ -56,7 +59,8 @@
         android:padding="10dp"
         android:text="Sign In"
         android:textColor="#FFF"
-        android:textSize="17dp"/>
+        android:textSize="17dp"
+        android:fontFamily="@font/poppins"/>
 
     <TextView
         android:id="@+id/tvRegister"
@@ -65,7 +69,8 @@
         android:text="Belum memiliki akun?"
         android:textColor="@color/colorPrimary"
         android:textSize="12dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"/>
 
 
 </LinearLayout>

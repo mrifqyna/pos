@@ -44,7 +44,8 @@
                 android:textStyle="bold"
                 android:id="@+id/product_name"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"/>
             <TextView
                 android:text="RP.0000"
                 android:textStyle="bold"
@@ -52,7 +53,8 @@
                 android:id="@+id/product_price"
                 android:maxLines="1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"/>
             <include layout="@layout/component_number_picker"/>
 
         </LinearLayout>

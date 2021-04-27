@@ -22,7 +22,8 @@
             <ImageView
                 android:src="@drawable/ic_baseline_remove_24"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="#FBE0C4"/>
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -34,7 +35,8 @@
             android:text="0"
             android:id="@+id/product_selectedQuantity"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"/>
 
         <com.google.android.material.card.MaterialCardView
             android:backgroundTint="#9F9F9F"
@@ -44,9 +46,10 @@
             android:layout_height="24dp">
 
             <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_add_24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:background="#FBE0C4"/>
 
         </com.google.android.material.card.MaterialCardView>
 

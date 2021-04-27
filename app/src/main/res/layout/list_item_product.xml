@@ -25,7 +25,8 @@
             android:id="@+id/product_name"
             android:maxLines="2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"/>
         <TextView
             android:padding="8dp"
             android:text="Rp.0000"
@@ -34,7 +35,8 @@
             android:maxLines="1"
             android:id="@+id/product_price"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"/>
 
     </LinearLayout>
 
