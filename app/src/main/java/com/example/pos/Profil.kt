@@ -1,8 +1,8 @@
 package com.example.pos
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_profil.*
 
 class Profil : AppCompatActivity() {
@@ -15,12 +15,17 @@ class Profil : AppCompatActivity() {
         val username = intent.getStringExtra("username")
         val jenis_kelamin = intent.getStringExtra("jenis_kelamin")
 
-        Toast.makeText(this, "Cek $id,$nama,$username,$jenis_kelamin", Toast.LENGTH_SHORT).show()
-
         idNama.text = ": "+nama
         idUsername.text = ": "+username
         idGender.text = ": "+jenis_kelamin
 
-
+        btnUbah.setOnClickListener{
+            val intent = Intent(this, EditProfil::class.java)
+            intent.putExtra("id", id)
+            intent.putExtra("nama", nama)
+            intent.putExtra("username", username)
+            intent.putExtra("jenis_kelamin", jenis_kelamin)
+            startActivity(intent)
+        }
     }
 }
