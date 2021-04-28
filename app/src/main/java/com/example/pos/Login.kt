@@ -43,10 +43,11 @@ class Login : AppCompatActivity() {
                 val jsonObjectRequest = JsonObjectRequest(Request.Method.POST, URL, jsonObject, { response ->
                     if (response.getString("status") == "berhasil") {
 
-                        val stringPesan = etUsername.text.toString()
+                        val stringUsername = etUsername.text.toString()
                         val intent = Intent(this, Dashboard::class.java)
-                        intent.putExtra("Pesan", stringPesan)
                         startActivity(intent)
+                        intent.putExtra("username", stringUsername)
+
                     } else if (response.getString("status") == "gagal") {
                         Toast.makeText(this, "Gagal Login", Toast.LENGTH_SHORT).show()
                     }

@@ -60,4 +60,5 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.android.volley:volley:1.1.0'
     implementation 'com.android.support:appcompat-v7:30.0.0'
+    implementation 'com.amitshekhar.android:jackson-android-networking:1.0.1'
 }
