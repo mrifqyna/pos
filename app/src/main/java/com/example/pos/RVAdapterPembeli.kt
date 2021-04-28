@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_pembeli.view.*
 
-class RVAAdapterPembeli(private val context: Context, private val arrayList: ArrayList<Pembeli>)
-    : RecyclerView.Adapter<RVAAdapterPembeli.Holder>() {
+class RVAdapterPembeli (private val context: Context, private val arrayList: ArrayList<Pembeli>)
+    : RecyclerView.Adapter<RVAdapterPembeli.Holder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
@@ -18,7 +18,7 @@ class RVAAdapterPembeli(private val context: Context, private val arrayList: Arr
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.view.listId.text = "id : "+arrayList?.get(position)?.id
         holder.view.listNama.text = "Nama : "+arrayList?.get(position)?.nama
-        holder.view.listUsername.text = "Alamat : "+arrayList?.get(position)?.username
+        holder.view.listUsername.text = "Username : "+arrayList?.get(position)?.username
         holder.view.listGender.text = "Jenis Kelamin : "+arrayList?.get(position)?.jenis_kelamin
     }
 

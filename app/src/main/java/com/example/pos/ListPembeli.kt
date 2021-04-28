@@ -33,7 +33,7 @@ class ListPembeli : AppCompatActivity() {
         loading.setMessage("Memuat data...")
         loading.show()
 
-        AndroidNetworking.get(APIEndPoint.READ)
+        AndroidNetworking.get("https://kewanku.000webhostapp.com/kewanku/read.php")
             .setPriority(Priority.MEDIUM)
             .build()
             .getAsJSONObject(object : JSONObjectRequestListener {
@@ -52,7 +52,7 @@ class ListPembeli : AppCompatActivity() {
                             jsonObject.getString("jenis_kelamin")))
                         if(jsonArray?.length() - 1 == i){
                             loading.dismiss()
-                            val adapter = RVAAdapterPembeli(applicationContext,arrayList)
+                            val adapter = RVAdapterPembeli(applicationContext,arrayList)
                             adapter.notifyDataSetChanged()
                             rvPembeli.adapter = adapter
                         }
