@@ -16,7 +16,7 @@ class ProductViewModel : ViewModel(){
     fun fetchDummyProduct(){
         //pura2nya dari API
         val dummies = mutableListOf<Product>().apply {
-            add(Product(1, "Whiskas Ocean Fish", 299900, "http://p.ipricegroup.com/uploaded_f10bfa776289954438da7595a7e1a926.jpg"))
+            add(Product(1, "Whiskas Ocean Fish", 299900, "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//98/MTA-4592555/whiskas_whiskas_dry_pockets_junior_ocean_fish_flavour_with_milk_dry_cat_food_-1-1_kg-_1_bag-_full02_trdo7vir.jpg"))
             add(Product(2, "Whiskas Tuna", 449850, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVOsFfGKQ-nYpAc-E-5nx0gI4FViBGEuPf6w&usqp=CAU"))
             add(Product(3, "Oricat Adult", 22000, "https://ecs7.tokopedia.net/img/cache/500-square/VqbcmM/2020/12/13/5aa47e50-a3e4-4608-a244-e8d2e4abd293.jpg"))
             add(Product(4, "Oricat Kitten", 20600, "https://id-test-11.slatic.net/p/8218ebd1a06e1ab9bdb8e36444c02215.jpg_720x720q80.jpg_.webp"))
