@@ -48,8 +48,7 @@ class ListPembeli : AppCompatActivity() {
                         val jsonObject :JSONObject = jsonArray?.optJSONObject(i)
                         arrayList.add(Pembeli(jsonObject.getString("id"),
                             jsonObject.getString("nama"),
-                            jsonObject.getString("username"),
-                            jsonObject.getString("jenis_kelamin")))
+                            jsonObject.getString("username")))
                         if(jsonArray?.length() - 1 == i){
                             loading.dismiss()
                             val adapter = RVAdapterPembeli(applicationContext,arrayList)

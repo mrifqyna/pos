@@ -36,12 +36,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Username 1" />
-
-            <TextView
-                android:id="@+id/listGender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Jenis Kelamin" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

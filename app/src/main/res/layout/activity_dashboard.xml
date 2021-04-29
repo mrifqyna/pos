@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="100dp"
-            android:fontFamily="monospace"
+            android:fontFamily="@font/poppins"
             android:text="KewanKu"
             android:textColor="@color/colorPrimary"
             android:textSize="30dp"
@@ -34,6 +34,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginBottom="84dp"
             android:text="Jual Perlengkapan Hewan Peliharaan Anda"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/colorPrimary"
             android:textSize="10dp"
             app:layout_constraintBottom_toTopOf="@+id/Layout1"
@@ -85,7 +86,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Menu"
-                        android:textSize="24dp" />
+                        android:textSize="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"/>
 
                     <ImageView
                         android:id="@+id/menu"
@@ -117,7 +120,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Profil"
-                        android:textSize="24dp" />
+                        android:textSize="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"/>
 
                     <ImageView
                         android:id="@+id/profil"
@@ -145,6 +150,7 @@
                 android:id="@+id/cvList"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:visibility="gone"
                 android:layout_margin="10dp"
                 android:layout_weight="1">
 
@@ -161,7 +167,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="List Pembeli"
-                        android:textSize="24dp" />
+                        android:textSize="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"/>
 
                     <ImageView
                         android:id="@+id/List"
@@ -193,7 +201,9 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:text="Log out"
-                        android:textSize="24dp" />
+                        android:textSize="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/black"/>
 
                     <ImageView
                         android:id="@+id/Logout"

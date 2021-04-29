@@ -4,9 +4,11 @@ import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
+import kotlinx.android.synthetic.main.activity_login.*
 
 class Dashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +22,10 @@ class Dashboard : AppCompatActivity() {
         val id = intent.getStringExtra("id")
         val nama = intent.getStringExtra("nama")
         val username = intent.getStringExtra("username")
-        val jenis_kelamin = intent.getStringExtra("jenis_kelamin")
+
+        if (nama == "admin123") {
+            cv_list.visibility = View.VISIBLE
+        }
 
         //Toast.makeText(this, "Cek $id,$nama,$username,$jenis_kelamin", Toast.LENGTH_SHORT).show()
 
@@ -39,7 +44,6 @@ class Dashboard : AppCompatActivity() {
             intent.putExtra("id", id)
             intent.putExtra("nama", nama)
             intent.putExtra("username", username)
-            intent.putExtra("jenis_kelamin", jenis_kelamin)
 
             startActivity(intent)
         }
@@ -47,7 +51,7 @@ class Dashboard : AppCompatActivity() {
         cv_logout.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Log out")
-            builder.setMessage("Yakin akan Log out ?")
+            builder.setMessage("Yakin akan Logout ?")
             builder.setPositiveButton("Oke", { dialogInterface: DialogInterface, i: Int -> this.finish();
                 Toast.makeText(this, "Anda Berhasil Logout", Toast.LENGTH_SHORT).show();
             })

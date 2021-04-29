@@ -19,7 +19,6 @@ class RVAdapterPembeli (private val context: Context, private val arrayList: Arr
         holder.view.listId.text = "id : "+arrayList?.get(position)?.id
         holder.view.listNama.text = "Nama : "+arrayList?.get(position)?.nama
         holder.view.listUsername.text = "Username : "+arrayList?.get(position)?.username
-        holder.view.listGender.text = "Jenis Kelamin : "+arrayList?.get(position)?.jenis_kelamin
     }
 
     override fun getItemCount(): Int = arrayList!!.size

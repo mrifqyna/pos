@@ -46,7 +46,6 @@ class Login : AppCompatActivity() {
                         val id = response.getString("id")
                         val nama = response.getString("nama")
                         val username = response.getString("username")
-                        val jenis_kelamin = response.getString("jenis_kelamin")
 
                         //Toast.makeText(this, "Cek $id,$nama,$username,$jenis_kelamin", Toast.LENGTH_SHORT).show()
 
@@ -54,7 +53,6 @@ class Login : AppCompatActivity() {
                         intent.putExtra("id", id)
                         intent.putExtra("nama", nama)
                         intent.putExtra("username", username)
-                        intent.putExtra("jenis_kelamin", jenis_kelamin)
 
                         startActivity(intent)
 

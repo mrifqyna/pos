@@ -16,12 +16,18 @@ class ProductViewModel : ViewModel(){
     fun fetchDummyProduct(){
         //pura2nya dari API
         val dummies = mutableListOf<Product>().apply {
-            add(Product(1, "Beng beng", 3000, "https://pbs.twimg.com/profile_images/1210618202457292802/lt9KD2lt_400x400.jpg"))
-            add(Product(2, "Indomie goreng", 3500, "https://pbs.twimg.com/profile_images/1210618202457292802/lt9KD2lt_400x400.jpg"))
-            add(Product(3, "Garam", 3000, "https://pbs.twimg.com/profile_images/1210618202457292802/lt9KD2lt_400x400.jpg"))
-            add(Product(4, "Tissue magic", 8000, "https://pbs.twimg.com/profile_images/1210618202457292802/lt9KD2lt_400x400.jpg"))
-            add(Product(5, "Sprite", 6000, "https://pbs.twimg.com/profile_images/1210618202457292802/lt9KD2lt_400x400.jpg"))
-            add(Product(6, "Kopi", 6000, "https://pbs.twimg.com/profile_images/1210618202457292802/lt9KD2lt_400x400.jpg"))
+            add(Product(1, "Whiskas Ocean Fish", 3000, "whiskasoceanfish.webp"))
+            add(Product(2, "Whiskas Tuna", 3500, "whiskastuna.jpg"))
+            add(Product(3, "Oricat Adult", 3000, ""))
+            add(Product(4, "Oricat Kitten", 8000, ""))
+            add(Product(5, "Royal Cannin Mother & Baby", 6000, ""))
+            add(Product(6, "Royal Cannin Kitten", 6000, ""))
+            add(Product(7, "Royal Cannin Persia", 6000, ""))
+            add(Product(8, "Snack Me-O", 6000, ""))
+            add(Product(9, "Kandang", 6000, ""))
+            add(Product(10, "Vitamin Hewan", 6000, ""))
+            add(Product(11, "Litter Box", 6000, ""))
+            add(Product(12, "Pasir", 6000, ""))
         }
         products.postValue(dummies)
 
