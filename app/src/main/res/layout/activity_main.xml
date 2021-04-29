@@ -15,7 +15,7 @@
         android:layout_below="@+id/toolbar"
         android:layout_alignParentBottom="true" />
 
-    <include layout="@layout/bottomsheet_cart"/>
+    <include layout="@layout/bottomsheet_cart" />
 
     <com.google.android.material.card.MaterialCardView
         android:layout_gravity="bottom"
